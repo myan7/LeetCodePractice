@@ -1,0 +1,9 @@
+package lc.q164.MaximumGap;
+
+public class MaximumGap {
+
+	public static void main(String[] args) {
+
+	}
+
+}

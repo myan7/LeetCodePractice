@@ -1,0 +1,12 @@
+
+public class ParseTest {
+
+	public static void main(String[] args) {
+		String str = new String("1,2,3,4");
+		int[] intArray = new int[str.length()];
+		String[] tmp = new String[4];
+		tmp = str.split(",");
+
+	}
+
+}

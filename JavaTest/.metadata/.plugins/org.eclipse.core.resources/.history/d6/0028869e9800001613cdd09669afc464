@@ -1,0 +1,9 @@
+
+public class Combo {
+	
+	int bucket_1;
+	int bucket_2;
+	int bucket_3;
+	
+	
+}

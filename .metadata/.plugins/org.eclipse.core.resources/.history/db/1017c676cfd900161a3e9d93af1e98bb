@@ -1,0 +1,25 @@
+
+public class ParseTest {
+
+	public static void main(String[] args) {
+		String str = new String("1,2,3,4");
+				
+		String[] tmp = new String[4];
+		tmp = str.split(",");
+		
+		int[] intArray = new int[tmp.length];
+		System.out.print(tmp.length);
+		System.out.println();
+
+		
+		for(int i = 0; i < tmp.length;i++)
+		{
+			intArray[i]=Integer.parseInt(tmp[i]);
+			System.out.println(intArray[i]);
+		}
+		
+		
+
+	}
+
+}

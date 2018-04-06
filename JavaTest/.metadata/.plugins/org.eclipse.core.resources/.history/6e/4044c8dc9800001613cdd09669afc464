@@ -1,0 +1,13 @@
+import java.util.*;
+public class Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("According to this order A, B, and C, please input 3 integers.");
+		System.out.println("These integers stand for the capacities of three buckets, seperated by "+ "\",\""+".");
+		Scanner scan = new Scanner(System.in);
+		
+		
+	}
+
+}

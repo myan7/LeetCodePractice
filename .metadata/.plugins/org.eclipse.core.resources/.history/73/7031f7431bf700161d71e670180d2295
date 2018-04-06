@@ -1,0 +1,52 @@
+package linkedListCycle;
+/*
+ * 141. Linked List Cycle
+ * Given a linked list, determine if it has a cycle in it.
+
+Follow up:
+Can you solve it without using extra space?
+
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class LinkedListCycle {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+		
+	}
+
+	public static boolean hasCycle(ListNode head) 
+	{
+		boolean value = true;
+		ListNode aNode = head;
+		
+		while(aNode!=null) // make sure the starting node is not null
+		{
+			if(aNode.next != null)
+			{
+				aNode =aNode.next;
+				if(aNode == head)
+				{
+					value = true;
+				}
+			}else
+			{
+				value = false;
+				break;
+			}
+		}
+		return value;
+        
+    }
+	
+}

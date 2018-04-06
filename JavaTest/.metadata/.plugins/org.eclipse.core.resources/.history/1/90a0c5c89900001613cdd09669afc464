@@ -1,0 +1,9 @@
+
+public class Combo 
+{	
+	int[] combo = new int[3];
+	
+	
+	
+	
+}

@@ -1,0 +1,17 @@
+package uglyNumber;
+
+public class UglyNum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static boolean isUgly(int num) 
+	{
+		boolean value = false;
+		
+		return value;
+        
+    }
+}

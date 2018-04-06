@@ -1,0 +1,14 @@
+
+public class Combo 
+{	
+	int[] combo = new int[3];
+
+	public Combo(int[] combo) {
+		super();
+		this.combo = combo;
+	}
+	
+	
+	
+	
+}

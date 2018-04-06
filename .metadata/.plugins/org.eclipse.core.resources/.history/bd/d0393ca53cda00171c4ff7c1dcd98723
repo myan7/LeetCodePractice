@@ -1,0 +1,9 @@
+package stringTest;
+
+public class StringEqualsTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

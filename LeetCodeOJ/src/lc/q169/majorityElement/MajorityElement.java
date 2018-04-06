@@ -1,0 +1,119 @@
+package lc.q169.majorityElement;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MajorityElement {
+/*
+ * 169. Majority Element
+ * Given an array of size n, find the majority element. 
+ * The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+
+You may assume that the array is non-empty and 
+the majority element always exist in the array.
+ * 
+ * 
+ * 
+ */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int[] nums = {1,0,1,0,1,0,1,1,1,0,0,0,0};
+		int[] nums2={3,3,4};
+//		System.out.println("The majority element in this array is"+majorityElement(nums));
+		System.out.println();
+		System.out.println("The majority element in this array is"+majorityElement2(nums));
+		System.out.println("The majority element in this array is"+majorityElement(nums));
+
+	}
+	
+    
+	public static int majorityElement(int[] nums) 
+	{
+		int ans =0;
+			Arrays.sort(nums);
+			ans = nums[nums.length/2];
+		return ans;
+    }
+	
+	// Moore's voting algorithm
+	public static int majorityElement2(int[] nums) 
+	{
+		    int count=0, ret = 0;
+		    for(int e:nums)
+		    	System.out.print(e+" ");
+		    
+		    System.out.println();
+		    for (int num: nums) 
+		    {
+		        if (count==0)
+		        {
+		        	ret = num;
+//		        	System.out.println("ret is "+ ret+ " and num is "+ num);
+		        }
+		        if (num!=ret)
+		        {
+		        	count--;
+//		        	System.out.println("the second if works and the count is "+ count);
+		        }
+		            
+		        else
+		        {
+		        	count++;
+//		        	System.out.println("the else part the count has gain one: "+ count);
+		        }
+		    }
+		 // you cannot use if-- else if, these two cases are not mutually exclusive.
+		 // nums2[3,3,4] will crash it if you use if else if instead of if if
+		    return ret;
+    }
+	
+	// Hashtable 
+	public static int majorityElement3(int[] nums) {
+	    Map<Integer, Integer> myMap = new HashMap<Integer, Integer>();
+	    //Hashtable<Integer, Integer> myMap = new Hashtable<Integer, Integer>();
+	    int ret=0;
+	    for (int num: nums) {
+	        if (!myMap.containsKey(num))
+	            myMap.put(num, 1);
+	        else
+	            myMap.put(num, myMap.get(num)+1);
+	        if (myMap.get(num)>nums.length/2) {
+	            ret = num;
+	            break;
+	        }
+	    }
+	    return ret;
+	}
+
+	// Bit manipulation 
+	public static int majorityElement4(int[] nums) {
+	    int[] bit = new int[32];
+	    for (int num: nums)
+	        for (int i=0; i<32; i++) 
+	            if ((num>>(31-i) & 1) == 1)
+	                bit[i]++;
+	    int ret=0;
+	    for (int i=0; i<32; i++) {
+	        bit[i]=bit[i]>nums.length/2?1:0;
+	        ret += bit[i]*(1<<(31-i));
+	    }
+	    return ret;
+	}
+	
+	public static int majorityElement5(int[] num) {
+
+        int major=num[0], count = 1;
+        for(int i=1; i<num.length;i++){
+            if(count==0){
+                count++;
+                major=num[i];
+            }else if(major==num[i]){
+                count++;
+            }else count--;
+            
+        }
+        return major;
+    }
+}

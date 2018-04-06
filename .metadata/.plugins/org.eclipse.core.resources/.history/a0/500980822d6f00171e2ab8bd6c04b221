@@ -1,0 +1,91 @@
+package lc.q414.ThirdMaximumNumber;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
+
+/*
+ * 414. Third Maximum Number
+ * Given a non-empty array of integers, return the third maximum number in this array. 
+ * If it does not exist, return the maximum number. The time complexity must be in O(n).
+
+Example 1:
+Input: [3, 2, 1]
+
+Output: 1
+
+Explanation: The third maximum is 1.
+Example 2:
+Input: [1, 2]
+
+Output: 2
+
+Explanation: The third maximum does not exist, so the maximum (2) is returned instead.
+Example 3:
+Input: [2, 2, 3, 1]
+
+Output: 1
+
+Explanation: Note that the third maximum here means the third maximum distinct number.
+Both numbers with value 2 are both considered as second maximum.
+ * 
+ * 
+ */
+public class ThirdMaximumNumber {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+		int[] tc1 = {1,2,3};
+		System.out.println(thirdMax(tc1));
+	}
+	
+	//67.23%
+	public static int thirdMax(int[] nums) 
+	{
+		int index = 2;
+		long[] a = new long[3];
+		for(int i =0;i<=index;i++)
+		{
+			a[i] = Long.MIN_VALUE;
+		}
+		// first initialize all elements as min value
+		Arrays.sort(nums);
+		// sort the original array.
+		
+		Set<Integer> myset = new HashSet<Integer>();
+		
+		for(int i =nums.length-1; i>=0 && index>=0; i--)
+		{
+			if(myset.add(nums[i])) 
+			{
+				a[index--] = nums[i];
+			}
+		}
+		//from the largest element, if it is larger than its previous one, then store it in the last position
+//		for example: [3,2,1] --> [1,2,3]
+//		a[2] =3, a[1] =2, a[0] =1;
+		return a[0]==Long.MIN_VALUE? (int)a[2]: (int)a[0];
+    }
+
+	public static int thirdMax1(int[] nums) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        Set<Integer> set = new HashSet<>();
+        for (int i : nums) {
+            if (!set.contains(i)) {
+                pq.offer(i);
+                set.add(i);
+                if (pq.size() > 3) {
+                    set.remove(pq.poll());
+                }
+            }
+        }
+        if (pq.size() < 3) {
+            while (pq.size() > 1) {
+                pq.poll();
+            }
+        }
+        return pq.peek();
+}

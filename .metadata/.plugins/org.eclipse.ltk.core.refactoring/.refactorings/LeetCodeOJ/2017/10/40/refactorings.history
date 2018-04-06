@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;lc.q142.LinkedListCycle_II&apos; to &apos;lc.q141_q142.LinkedListCycle_I_II&apos;&#x0A;- Original project: &apos;LeetCodeOJ&apos;&#x0A;- Original element: &apos;LeetCodeOJ/src/lc.q142.LinkedListCycle_II&apos;&#x0A;- Renamed element: &apos;LeetCodeOJ/src/lc.q141_q142.LinkedListCycle_I_II&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;lc.q142.LinkedListCycle_II&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;lc.q142.LinkedListCycle_II" name="lc.q141_q142.LinkedListCycle_I_II" qualified="false" references="true" stamp="1507143948821" textual="false" version="1.0"/>
+</session>

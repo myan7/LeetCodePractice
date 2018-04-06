@@ -1,0 +1,10 @@
+package lc.q203.removelinkedlistelements;
+
+public class RemoveLinkedListElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

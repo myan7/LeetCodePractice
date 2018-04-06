@@ -1,0 +1,45 @@
+
+public class Combo {
+	
+	int bucket_1;
+	int bucket_2;
+	int bucket_3;
+	
+	public Combo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Combo(int bucket_1, int bucket_2, int bucket_3) {
+		super();
+		this.bucket_1 = bucket_1;
+		this.bucket_2 = bucket_2;
+		this.bucket_3 = bucket_3;
+	}
+
+	public int getBucket_1() {
+		return bucket_1;
+	}
+
+	public void setBucket_1(int bucket_1) {
+		this.bucket_1 = bucket_1;
+	}
+
+	public int getBucket_2() {
+		return bucket_2;
+	}
+
+	public void setBucket_2(int bucket_2) {
+		this.bucket_2 = bucket_2;
+	}
+
+	public int getBucket_3() {
+		return bucket_3;
+	}
+
+	public void setBucket_3(int bucket_3) {
+		this.bucket_3 = bucket_3;
+	}
+	
+	
+}

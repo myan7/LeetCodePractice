@@ -1,0 +1,9 @@
+package lc.q56.MergeIntervals;
+
+public class MergeIntervals {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package lc.q414.ThirdMaximumNumber;
+
+public class ThirdMaximumNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

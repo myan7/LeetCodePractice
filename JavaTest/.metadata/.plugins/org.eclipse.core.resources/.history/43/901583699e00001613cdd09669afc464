@@ -1,0 +1,34 @@
+import java.util.Arrays;
+
+
+public class Vertex
+{	
+	int[] combo = new int[3];
+
+	public Vertex(int[] combo) 
+	{
+		super();
+		this.combo = combo;
+	}
+
+	public boolean equals(Vertex test)
+	{
+		boolean flag = false;
+		for(int i =0; i<combo.length; i++)
+		{
+			if(test.combo[i] == combo[i]);
+			flag = true;
+		}
+		return flag;
+	}
+	
+	public void output()
+	{
+		System.out.print("combo[0], combo[1], combo[2]");
+	}
+	
+	
+	
+	
+	
+}

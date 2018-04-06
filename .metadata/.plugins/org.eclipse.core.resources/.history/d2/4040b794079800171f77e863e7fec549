@@ -1,0 +1,49 @@
+package lc.q560.SubarraySumEqualsK;
+/*
+ * 560. Subarray Sum Equals K
+ * Medium 
+ * Given an array of integers and an integer k, 
+ * you need to find the total number of continuous subarrays whose sum equals to k.
+
+Example 1:
+Input:nums = [1,1,1], k = 2
+Output: 2
+
+Note:
+The length of the array is in range [1, 20,000].
+The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].
+ */
+
+public class SubarraySumEqualsK {
+
+	public static void main(String[] args) 
+	{
+		int[] tc1 = {1,1,1};
+		System.out.println(subarraySum(tc1, 2));
+	}
+	
+	public static int subarraySum(int[] nums, int k) 
+	{
+		int len = nums.length;
+		int beg = 0, end = 0;
+		int sum = 0;
+		int count = 0;
+		while(beg<len)
+		{			
+			while(end < len)
+			{
+				sum+= nums[end];
+				if(sum == k)
+				{
+					beg = end;
+					count++;
+					sum = 0;
+					end = beg;
+				}
+				
+			}
+		}
+		return count;
+	}
+
+}

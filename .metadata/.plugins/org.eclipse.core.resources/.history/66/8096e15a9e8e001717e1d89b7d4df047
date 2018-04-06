@@ -1,0 +1,9 @@
+package lc.q79.WordSearch;
+
+public class WordSearch {
+
+	public static void main(String[] args) {
+
+	}
+
+}

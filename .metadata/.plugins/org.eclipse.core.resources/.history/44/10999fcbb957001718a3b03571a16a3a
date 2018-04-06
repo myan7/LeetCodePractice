@@ -1,0 +1,21 @@
+package lc.q172.factorialtrailingzeroes;
+/*
+ * 172. Factorial Trailing Zeroes
+ * Given an integer n, return the number of trailing zeroes in n!. 
+ * Note: Your solution should be in logarithmic time complexity.
+ * 
+ * 
+ */
+public class FactorialTrailingZeroes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println();
+	}
+	
+    public static int trailingZeroes0(int n) 
+    {
+    	return n == 0 ? 0 : n / 5 + trailingZeroes0(n / 5);
+    }
+
+}

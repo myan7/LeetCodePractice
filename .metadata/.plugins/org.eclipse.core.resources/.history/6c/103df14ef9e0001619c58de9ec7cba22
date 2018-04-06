@@ -1,0 +1,66 @@
+package complementNumber;
+
+
+import java.math.*;
+import java.util.Scanner;
+
+
+public class Solution {
+
+//	Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+//
+//	Note:
+//	The given integer is guaranteed to fit within the range of a 32-bit signed integer.
+//	You could assume no leading zero bit in the integer’s binary representation.
+//	Example 1:
+//	Input: 5
+//	Output: 2
+//	Explanation: The binary representation of 5 is 101 (no leading zero bits), 
+//	and its complement is 010. So you need to output 2.
+
+	 private static Scanner kbi = new Scanner(System.in);
+	 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Please give me an integer: ");
+		int userInput = kbi.nextInt();
+		System.out.println("The complement number of the integer you gave me is "
+		+findComplement(userInput));
+		
+	}
+	
+	public static int findComplement(int num) 
+    {
+		int complement = 0;
+		String numStr = Integer.toBinaryString(num);
+		char[] numCh = numStr.toCharArray();
+		int[] numBit = new int[32];
+		
+		int compNum = 0;
+				
+		for(int i =0;i<32;i++)
+		{
+			numBit[i]=(int)numCh[i];
+		}
+		
+		for(int i = 0;i<32;i++)
+		{
+			if(numBit[i]==0)
+			{
+				numBit[i]=1;
+			}else
+			{
+				numBit[i]=0;
+			}
+		}
+		
+		for(int i = 0; i<32;i++)
+		{
+			compNum += Math.pow(2, numBit[i]);
+		}
+		
+        return compNum;
+    }
+	
+
+}

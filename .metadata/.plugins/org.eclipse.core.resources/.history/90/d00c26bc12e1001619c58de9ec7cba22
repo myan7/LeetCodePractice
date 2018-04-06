@@ -1,0 +1,21 @@
+package complementNumber;
+
+public class SolutionL {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int i =10;
+		int compNum = ~i;
+		System.out.println(compNum);
+	}
+
+//	To find complement of num = 5 which is 101 in binary.
+//			First ~num gives ...11111010 but we only care about the rightmost 3 bits.
+//			Then to erase the 1s before 010 we can add 1000
+
+	public int findComplement(int num) 
+	{
+		return ~num + (Integer.highestOneBit(num) << 1);
+	}
+}

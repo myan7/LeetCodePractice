@@ -1,0 +1,9 @@
+package lc.q120.Triangle;
+
+public class Triangle {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,49 @@
+package integerMaxValue;
+
+
+public class IntegerMaxValue {
+
+	public static void main(String[] args) 
+	{
+		int tc32 = 1999999999;
+		System.out.println(tc32);
+		
+		int len = (int)Math.log10(tc32)+1;
+		int[] nums = new int[len];
+		
+		for(int i = len-1;i>=0;i--)
+		{
+			nums[i]= tc32%10;
+			tc32 = tc32/10;
+		}
+		
+		for(int i = 0; i<len;i++)
+		{
+			if(i<len-1 && nums[i]<nums[i+1])
+			{
+				int tmp = nums[i];
+				nums[i]= nums[i+1];
+				nums[i+1] = tmp;
+			}
+			System.out.print(nums[i]+" ");
+		}
+		
+		
+		System.out.println();
+		int ans = 0;
+		for(int e:nums)
+		{
+			ans = ans*10+e;
+			System.out.println("e = "+ e +" and ans = "+ ans);
+		}
+		
+		Object obj = new Integer(3);
+		String str = (String)obj;
+		System.out.println(str);
+		
+//		Float f1 = new Float("2.25f");
+//		System.out.println(f1);
+		
+	}
+
+}

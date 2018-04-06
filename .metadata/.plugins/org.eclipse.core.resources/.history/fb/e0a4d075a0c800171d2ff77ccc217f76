@@ -1,0 +1,9 @@
+package linkedList;
+
+public class Q86_PartitionList {
+
+	public static void main(String[] args) {
+
+	}
+
+}

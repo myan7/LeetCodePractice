@@ -1,0 +1,10 @@
+package forLoopTest;
+
+public class ForConditionTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

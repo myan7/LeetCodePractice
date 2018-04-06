@@ -1,0 +1,9 @@
+package lc.q551.StudentAttendanceRecordI;
+
+public class StudentAttendanceRecordI {
+
+	public static void main(String[] args) {
+
+	}
+
+}

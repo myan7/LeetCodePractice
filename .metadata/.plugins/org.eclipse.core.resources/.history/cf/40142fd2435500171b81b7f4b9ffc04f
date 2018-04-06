@@ -1,0 +1,42 @@
+package lc.q203.removelinkedlistelements;
+/*
+ * 203. Remove Linked List Elements
+ * Easy
+ * 
+Remove all elements from a linked list of integers that have value val.
+
+Example
+Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
+Return: 1 --> 2 --> 3 --> 4 --> 5
+
+
+ * 
+ * 
+ */
+
+public class RemoveLinkedListElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static ListNode removeElements(ListNode head, int val) 
+	{
+		if(head.val == val)
+		{
+			return null;
+		}
+		else
+		{
+			while(head.next.val==val &&head.next.next.val !=val)
+			{
+				head.next = head.next.next;
+			}
+			return head;
+		}
+		
+    }
+}
+
+

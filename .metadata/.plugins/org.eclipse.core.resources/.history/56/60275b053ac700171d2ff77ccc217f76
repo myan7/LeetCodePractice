@@ -1,0 +1,9 @@
+package linkedList;
+
+public class Q61_RotateList {
+
+	public static void main(String[] args) {
+
+	}
+
+}

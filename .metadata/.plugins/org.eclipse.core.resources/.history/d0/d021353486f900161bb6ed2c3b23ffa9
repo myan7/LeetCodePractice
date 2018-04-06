@@ -1,0 +1,27 @@
+package forLoopTest;
+
+public class ForConditionTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		for(int i = 0;i<3;i++)
+		{
+			System.out.println("a");
+		}
+		
+		
+		System.out.println();
+		
+		int i =0;
+		for(System.out.println("a");i<3;System.out.println("b"))
+		{
+			System.out.print("c"+"\t");
+			i++;
+		}
+		
+		
+		
+	}
+
+}

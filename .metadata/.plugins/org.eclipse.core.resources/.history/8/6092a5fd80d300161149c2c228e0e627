@@ -1,0 +1,17 @@
+package zigzag;
+
+public class Solution {
+    public String convert(String s, int numRows) {
+        String ans = "";
+        
+    	
+    	for(int i =0;i<=s.length();i++)
+        {
+        	if(i%4==0)
+        	{
+        		System.out.print(s.charAt(i));
+        	}
+        }
+    	return ans;
+    }
+}

@@ -1,0 +1,58 @@
+package lc.q83.removeDuplicatesFromSortedList;
+/*
+ * 83. Remove Duplicates from Sorted List
+ * Given a sorted linked list, delete all duplicates 
+ * such that each element appear only once.
+ * 
+ * For example, 
+ * Given 1->1->2, return 1->2. 
+ * Given 1->1->2->3->3, return 1->2->3.
+ * 
+ * 
+ */
+
+public class RemoveDuplicatesFromSortedListSolution{
+	public static void main(String[] args)
+	{
+		
+		
+	}
+	/*
+	 * Definition for singly-linked list.
+	 * public class ListNode{
+	 *     int val;
+	 *     ListNode next;
+	 *     ListNode(int x) { val = x; }
+	 * }
+	 */
+	
+	public static ListNode deleteDuplicates(ListNode head) 
+	{
+		
+			return head;
+		
+		
+	}
+	
+	public static ListNode deleteDuplicates1(ListNode head)
+	{
+		ListNode list = head;
+         
+         while(list != null) {
+        	 if (list.next == null) {
+        		 break;
+        	 }
+        	 if (list.val == list.next.val) {
+        		 list.next = list.next.next;
+        	 } else {
+        		 list = list.next;
+        	 }
+         }
+         
+         return head;
+	}
+	
+}
+
+
+

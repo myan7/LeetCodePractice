@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;uglyNumber&apos; to &apos;lc.q263.uglyNumber&apos;&#x0A;- Original project: &apos;LeetCodeOJ&apos;&#x0A;- Original element: &apos;LeetCodeOJ/src/uglyNumber&apos;&#x0A;- Renamed element: &apos;LeetCodeOJ/src/lc.q263.uglyNumber&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;uglyNumber&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;uglyNumber" name="lc.q263.uglyNumber" qualified="false" references="true" stamp="1497471830969" textual="false" version="1.0"/>
+</session>

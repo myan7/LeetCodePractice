@@ -1,0 +1,27 @@
+package stringTest;
+
+public class StringEqualsTest {
+
+	public static void main(String[] args) {
+
+		String a = "java";
+		String b = "java";
+		String c = new String("java");
+		String d = new String("java");
+		
+		
+		Integer i1 = 127;
+		Integer i2 = 127;
+		Integer i3 = 128;
+		Integer i4 = 128;
+		
+		System.out.println("Integer i1 = 127 and Integer i2 = 127: "+  (i1 == i2));
+		System.out.println(i3==i4);
+		
+		System.out.println("a = java, b = java : "+(a==b));
+		
+		
+		
+	}
+
+}

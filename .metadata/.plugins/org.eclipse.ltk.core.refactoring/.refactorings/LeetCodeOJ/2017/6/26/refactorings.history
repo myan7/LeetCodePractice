@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;longestvalidparentheses32&apos; to &apos;lc.q32.longestvalidparentheses&apos;&#x0A;- Original project: &apos;LeetCodeOJ&apos;&#x0A;- Original element: &apos;LeetCodeOJ/src/longestvalidparentheses32&apos;&#x0A;- Renamed element: &apos;LeetCodeOJ/src/lc.q32.longestvalidparentheses&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;longestvalidparentheses32&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;longestvalidparentheses32" name="lc.q32.longestvalidparentheses" qualified="false" references="true" stamp="1498597664010" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package lc.q605.CanPlaceFlowers;
+
+public class CanPlaceFlowers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

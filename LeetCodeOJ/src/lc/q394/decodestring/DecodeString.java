@@ -1,0 +1,75 @@
+package lc.q394.decodestring;
+
+import java.util.Stack;
+
+/*
+ * 394. Decode String
+ * Given an encoded string, return it's decoded string.
+
+The encoding rule is: k[encoded_string], 
+where the encoded_string inside the square brackets is being repeated exactly k times.
+ Note that k is guaranteed to be a positive integer.
+
+You may assume that the input string is always valid; 
+No extra white spaces, square brackets are well-formed, etc.
+
+Furthermore, you may assume that the original data does not contain any digits 
+and that digits are only for those repeat numbers, k. 
+For example, there won't be input like 3a or 2[4].
+
+
+ * s = "3[a]2[bc]", return "aaabcbc".
+s = "3[a2[c]]", return "accaccacc".
+s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
+ * 
+ * */
+public class DecodeString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String testcase1 = "3[a]2[bc]";
+		String testcase2 = "3[a2[bc]]";
+		String testcase3 = "2[abc]13[cd]ef";
+
+	}
+	
+	public static String decodeString(String s) 
+	{
+/*
+ * I think I have an idea, every time find the last index of '[', 
+ * then 
+ * 1. start from that position, find out the number before it. the index one position ahead of it,*1,
+ * 		2 positions ahead of it, *10, . .. 
+ * 2. start from that position, looking for the first ']'
+ * 		record the substring between them, store it in a temp string
+ * 3. replace the substring, including the number and the [...] with the new temp string, 
+ * 		which is generated from the temp string from step2, and repeated number times from step 1.
+ * 4. repeat step 1,2,3, till there is no '['.']' pair.
+ */
+		String result = "";
+		StringBuffer sb = new StringBuffer(s);
+		Stack<Character> st = new Stack<Character>(); 
+		
+		while(sb.lastIndexOf("[") != -1)
+		{
+			int leftIndex = sb.lastIndexOf("[");
+			int rightIndex = sb.indexOf("]", leftIndex);
+			int times = 0;
+			int count = 0;
+//			find out the index of the pair '[',']'
+//			Step 1. find out the number before the pair.
+//			while(Character.isDigit(sb.charAt(--leftIndex))
+//					{
+//				times += (int)Math.pow(10, count++)*(s.charAt(--leftIndex)-'0');
+//					}
+			
+		}
+		
+		
+		result = sb.toString();
+		
+		return result;
+		
+    }
+
+}

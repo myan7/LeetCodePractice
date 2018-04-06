@@ -1,0 +1,9 @@
+package linkedList;
+
+public class Q24_SwapNodesinPairs {
+
+	public static void main(String[] args) {
+
+	}
+
+}
