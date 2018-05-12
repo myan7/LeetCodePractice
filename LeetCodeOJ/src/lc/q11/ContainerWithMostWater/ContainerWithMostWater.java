@@ -13,26 +13,44 @@ Note: You may not slant the container and n is at least 2.
 public class ContainerWithMostWater {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		int[] tc1 = {1,1}; // expected: 1
+		@SuppressWarnings("unused")
 		int[] tc8 = {0,2}; // expected: 0
 		int[] tc10 = {1,2,4,3}; //expected: 4
 		System.out.println(maxArea1(tc10));
 	}
 	
+	public static int maxArea3(int[] height)
+	{
+		int maxArea = 0; 
+		int left = 0; 
+		int right = height.length-1;
+		while(left<right)
+		{
+			maxArea = Math.max(maxArea, Math.min(height[left], height[right])*(right-left));
+			if(height[left]>height[right])
+				right--;
+			else
+				left++;
+		}
+		return maxArea;
+	}
+	
 //	76.55%
 	public int maxArea2(int[] height) {
         int i = 0, j = height.length - 1;
-        int s = i, e = j;
+        int start = i, end = j;
         int max = 0;
         boolean flag = true;
         while (i < j) {
-            if (flag && height[i] < height[s]) {
-                i ++;
+            if (flag && height[i] < height[start]) {
+                i++;
                 continue;
             }
             
-            if (!flag && height[j] < height[e]) {
-                j --;
+            if (!flag && height[j] < height[end]) {
+                j--;
                 continue;
             }
             
@@ -44,7 +62,10 @@ public class ContainerWithMostWater {
                 max = Math.max(height[i] * (j - i), max);
             }
             
-            if(flag) s = i ++; else  e = j --;
+            if(flag) 
+            		start = i ++; 
+            else  
+            		end = j --;
         }
         return max;
     }

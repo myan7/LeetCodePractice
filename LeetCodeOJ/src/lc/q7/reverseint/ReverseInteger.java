@@ -36,7 +36,7 @@ public class ReverseInteger {
 	public static void main(String[] args) 
 	{
 		int a = 2147483647;
-
+		System.out.println(reverse(a));
 	}
 
 	
@@ -50,9 +50,10 @@ public class ReverseInteger {
 				ans = ans*10;
 				ans += x%10;
 			}
+			else
+				ans = 0;
 			x=x/10;
 		}
-		
 		return ans;
 	}
 }

@@ -26,7 +26,10 @@ public class PalindromeNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println( "10^10=" + (10^10) );
+//		System.out.println( "10^10=" + (10^10) );
+		
+		int x = 9;
+		System.out.println(isPalindrome3(x));
 
 	}
 /*
@@ -41,10 +44,23 @@ public class PalindromeNumber {
 
  * */
 	
+//	1.34%
 	public static boolean isPalindrome(int x) 
 	{
-		boolean a = false;
-		return a;
+		if(x<0)
+			return false;
+		int temp = x;
+		int rev = 0;
+		while(temp!=0)
+		{
+			rev = rev*10 + temp%10;
+			temp=temp/10;
+		}
+			System.out.println(rev);
+			System.out.println(rev==x);
+		if(x == rev)
+			return true;
+		return false;
 	}
 	
 	
@@ -57,13 +73,16 @@ public class PalindromeNumber {
  * */
 	public static boolean isPalindrome3(int x) 
 	{
-		if (x<0 || (x!=0 && x%10==0)) return false;
+		if (x<0 || (x!=0 && x%10==0))  //小于零, 或者是可以被10 整除的, 都不行.
+			return false;
+		
 	    int rev = 0;
-	    while (x>rev){
-	    	rev = rev*10 + x%10;
-	    	x = x/10;
+	    while (x>rev)
+	    {
+		    	rev = rev*10 + x%10;
+		    	x = x/10;
 	    }
-	    return (x==rev || x==rev/10);
+	    return (x==rev || x==rev/10); // 要么是2n个数字 如 1221, 要么是2n+1个数字, 如121
 	}
 	
 /*

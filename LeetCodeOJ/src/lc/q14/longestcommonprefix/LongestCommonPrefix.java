@@ -13,8 +13,8 @@ public class LongestCommonPrefix {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String[] strs = {"a","b"};
-		System.out.println(longestCommonPrefix(strs));
+		String[] strs = {"a"};
+		System.out.println(longestCommonPrefix2(strs));
 	}
 	
 //	117 / 117 test cases passed.
@@ -23,7 +23,7 @@ public class LongestCommonPrefix {
 	public static String longestCommonPrefixAnswer01(String[] strs) 
 	{
 		StringBuilder result = new StringBuilder();
-        
+		
         if (strs!= null && strs.length > 0) 
 // if condition "strs!= null" were removed, what would happen?
 //	        117 / 117 test cases passed.
@@ -114,5 +114,42 @@ public class LongestCommonPrefix {
 //        }
 //        return sb.toString();
 //    }
+	
+	
+//	18.29%
+	public static String longestCommonPrefix2(String[] strs) {
+		 StringBuilder prefix = new StringBuilder("");
+	        if(strs.length < 1 || strs ==null)
+	            return prefix.toString();
+	        if(strs.length ==1)
+	        		return strs[0];
+	        
+	        boolean flag = false;
+	        for(int i=0;i<strs[0].length();i++)
+	        {
+	            char letter = strs[0].charAt(i);
+	            
+	            for(int j = 1; j<strs.length;j++)
+	            {
+	                if(i>=strs[j].length())
+	                {
+	                    flag = false;
+	                    break;
+	                }
+	                else if(strs[j].charAt(i) == letter)
+	                {
+	                    flag = true;
+	                }
+	                else
+	                {
+	                     flag = false;
+	                     return prefix.toString();
+	                }   
+	            }
+	            if(flag)
+	                prefix.append(letter);
+	        }
+	        return prefix.toString();
 
+}
 }

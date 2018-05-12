@@ -40,6 +40,7 @@ public class _3Sum {
 	public List<List<Integer>> threeSum1(int[] nums) {
 	     Arrays.sort(nums);
 	     List<List<Integer>> res=new ArrayList<List<Integer>>();
+	     
 	     for(int i=0; i<=nums.length-3; i++)
 	     {  
 	    	 if(i>0 && nums[i]==nums[i-1]) 
@@ -85,7 +86,7 @@ public class _3Sum {
 						while(low<high && nums[low]==nums[low+1])
 							low++;
 	                    while(low<high && nums[high]==nums[high-1]) 
-	                    	high--; // these two while loops remove the duplicates
+	                    		high--; // these two while loops remove the duplicates
 	                    low++;
 	                    high--;
 	                }

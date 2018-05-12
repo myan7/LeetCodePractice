@@ -1,4 +1,4 @@
-package lc.q242.validAnagram;
+package lc.q242.ValidAnagram;
 
 import java.util.HashSet;
 import java.util.Set;
